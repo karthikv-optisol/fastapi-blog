@@ -3,6 +3,6 @@ from enum import Enum, unique
 
 @unique
 class Gender(Enum):
-    MALE = "Male"
-    FEMALE = "Female"
+    Male = "Male"
+    Female = "Female"
     Others = "Others"

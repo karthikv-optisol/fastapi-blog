@@ -3,6 +3,7 @@ from .enums import Gender
 from typing import Optional
 from typing import List
 
+
 class Blog(BaseModel):
     title: str
     body: str
@@ -13,7 +14,6 @@ class showBlog(BaseModel):
     body: str
 
     class Config:
-        # orm_mode=True - old version
         orm_mode = True
 
 
@@ -23,7 +23,25 @@ class User(BaseModel):
     password: str
     mobile: str
     gender: Optional[Gender]
-    is_online: bool
+    isOnline: bool
+
     class Config:
         orm_mode = True
-        
+
+
+class showUser(BaseModel):
+    id: int
+    name: str
+    email: str
+    mobile: int
+    gender: str
+
+    class Config:
+        orm_mode = True
+
+class loginUser(BaseModel):
+    email:str
+    password:str
+    
+    class Config:
+        orm_mode = True
